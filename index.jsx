@@ -6,17 +6,20 @@ class ModalManagement extends EventEmitter {
   constructor() {
     super();
     this.dom = null;
+
+    this.open = this.open.bind(this);
+    this.close = this.close.bind(this);
   }
 
-  open = (dom) => {
+  open(dom) {
     this.dom = dom;
     this.emitChange();
-  };
+  }
 
-  close = () => {
+  close() {
     this.dom = null;
     this.emitChange();
-  };
+  }
 
   emitChange() {
     this.emit('modal', this.dom);
