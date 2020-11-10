@@ -1,11 +1,8 @@
 {
   "name": "react-modal-dom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "iMykhailychenko <igor.c.m@ukr.net>",
   "license": "ISC",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iMykhailychenko/react-modal-dom.git"
