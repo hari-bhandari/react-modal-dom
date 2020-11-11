@@ -1,7 +1,7 @@
 {
   "name": "react-modal-dom",
-  "version": "0.1.2",
-  "description": "Simple and customizable modal with react",
+  "version": "0.1.14",
+  "description": "Lightweight and customizable modal with react",
   "author": "iMykhailychenko <igor.c.m@ukr.net>",
   "license": "ISC",
   "repository": {
@@ -20,12 +20,15 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.5",
-    "babel-loader": "^8.2.1",
+    "autoprefixer": "^10.0.2",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^5.0.1",
-    "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^1.3.0",
+    "postcss-loader": "^4.0.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "style-loader": "^2.0.0",
@@ -39,23 +42,7 @@
   "main": "build/index.js",
   "scripts": {
     "prepublish": "npm run clean && npm run build",
-    "build": "npm run clean && webpack --config ./webpack.config.js",
+    "build": "npm run clean && webpack --config ./webpack.config.js && babel ./src --out-dir ./build",
     "clean": "rm -rf ./build"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "babel-plugin-transform-object-assign": "^6.22.0"
   }
 }

@@ -11,12 +11,14 @@ class ModalManagement extends EventEmitter {
     this.close = this.close.bind(this);
   }
 
-  open(dom) {
+  open(dom, callback) {
+    if (typeof callback === 'function') callback();
     this.dom = dom;
     this.emitChange();
   }
 
-  close() {
+  close(callback) {
+    if (typeof callback === 'function') callback();
     this.dom = null;
     this.emitChange();
   }
