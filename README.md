@@ -1,18 +1,18 @@
 # react-modal-dom
 
 
-### Lightweight and customizable modal with react
+## Lightweight and customizable modal with react
 
 We do not limit you with html markup. You can create responsive modal windows of absolutely any format and manage them from anywhere in your react application.
 
-### Installation
+## Installation
 ```javascript
 npm i react-modal-dom
 # or
 yarn add react-modal-dom
 ```
 
-### Demo
+## Demo
 
 Check out the demo here https://react-modal-dom.netlify.app/
 
@@ -21,7 +21,7 @@ Note!
 Use only one 'ModalComponent' component in the app.
 ```
 
-### Usage
+## Usage
 
 > Step 1 - add "ModalComponent" into your index.js file. 
 
@@ -98,7 +98,7 @@ const MyApp = () => {
 
 export default MyApp;
 ```
-### `modal` object
+## `modal` object
 This object has only 2 methods: `close` and `open`
 > `modal.open(<CustomModal/>, callback)` 
 
@@ -108,7 +108,7 @@ This object has only 2 methods: `close` and `open`
 `callback` - provide callback that will call immediately after your modal close or open
 
 
-### Use `modal` obj methods even in your redux actions
+## Use `modal` obj methods even in your redux actions
 
 ```javascript
 import { modal } from 'react-modal-dom';
@@ -136,7 +136,7 @@ function* myWatcher() {
 }
 ```
 
-### Create function to open your custom modal in redux files
+## Create function to open your custom modal in redux files
 
 ```javascript
 import { modal } from 'react-modal-dom';
