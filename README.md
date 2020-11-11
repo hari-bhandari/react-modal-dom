@@ -108,7 +108,7 @@ This object has only 2 methods: `close` and `open`
 `callback` - provide callback that will call immediately after your modal close or open
 
 
-### Use "modal" obj methods even in your redux actions
+### Use `modal` obj methods even in your redux actions
 
 ```javascript
 import { modal } from 'react-modal-dom';
@@ -132,6 +132,52 @@ function* myWatcher() {
     yield put({ type: 'SUCCESS', payload: data });
     // close modal here
     modal.close();
+  // ...
+}
+```
+
+### Create function to open your custom modal in redux files
+
+```javascript
+import { modal } from 'react-modal-dom';
+
+const MyModal = () => {
+  return (
+    <div className='modal'>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+  );
+};
+
+export const openMyModal = () => {
+  modal.open(<MyModal />)
+}
+
+export default MyModal;
+```
+
+```javascript
+import { openMyModal } from '../MyModal';
+
+export const myAction = () => async dispatch => {
+  dispatch({ type: 'START' });
+  try {
+    // ....
+    dispatch({ type: 'SUCCESS', payload: data });
+    // open your custom modal
+    openMyModal();
+  // ....
+```
+
+```javascript
+import { openMyModal } from '../MyModal';
+
+function* myWatcher() {
+  try {
+    // ...
+    yield put({ type: 'SUCCESS', payload: data });
+    // open your custom modal
+    openMyModal();
   // ...
 }
 ```
