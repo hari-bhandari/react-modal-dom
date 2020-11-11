@@ -1,6 +1,6 @@
 {
   "name": "react-modal-dom",
-  "version": "0.1.14",
+  "version": "0.1.18",
   "description": "Lightweight and customizable modal with react",
   "author": "iMykhailychenko <igor.c.m@ukr.net>",
   "license": "ISC",
@@ -13,9 +13,11 @@
   },
   "keywords": [
     "react-modal",
+    "modal",
     "react",
     "component",
-    "modal",
+    "responsive",
+    "redux",
     "custom"
   ],
   "devDependencies": {

@@ -9,3 +9,5 @@ webpack.config.js
 yarn.lock
 /src
 /example
+/static
+/node_modules
