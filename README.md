@@ -18,12 +18,13 @@ Check out the demo here https://react-modal-dom.netlify.app/
 
 ## Usage
 
+> Step 1 - add "ModalComponent" into your index.js file. 
+
+
 ```
 Note!
 Use only one 'ModalComponent' component in the app.
 ```
-
-> Step 1 - add "ModalComponent" into your index.js file. 
 
 ```javascript
 import React from 'react';
