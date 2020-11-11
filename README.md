@@ -118,11 +118,11 @@ import { modal } from 'react-modal-dom';
 export const myAction = () => async dispatch => {
   dispatch({ type: 'START' });
   try {
-    // ....
+    ....
     dispatch({ type: 'SUCCESS', payload: data });
     // close modal here
     modal.close();
-  // ....
+
 ```
 
 ```javascript
@@ -130,12 +130,11 @@ import { modal } from 'react-modal-dom';
 
 function* myWatcher() {
   try {
-    // ...
+    ...
     yield put({ type: 'SUCCESS', payload: data });
     // close modal here
     modal.close();
-  // ...
-}
+
 ```
 
 ## Create function to open your custom modal in redux files
