@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "description": "Lightweight and customizable modal with react",
   "author": "iMykhailychenko <igor.c.m@ukr.net>",
-  "license": "IMT",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iMykhailychenko/react-modal-dom.git"
