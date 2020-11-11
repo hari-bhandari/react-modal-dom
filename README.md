@@ -15,6 +15,7 @@ yarn add react-modal-dom
 ## Demo
 
 Check out the demo here <a href="https://react-modal-dom.netlify.app/" title="demo" target="_blank" rel="noopener noreferrer">https://react-modal-dom.netlify.app/</a>
+<img src="./static/step3.png" alt="">
 
 ## Usage
 
