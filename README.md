@@ -1,7 +1,7 @@
 # react-modal-dom
 
 
-## Lightweight and customizable modal with react
+## Lightweight and customizable react modal
 
 We do not limit you with html markup. You can create responsive modal windows of absolutely any format and manage them from anywhere in your react application.
 
