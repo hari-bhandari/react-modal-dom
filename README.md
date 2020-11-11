@@ -16,12 +16,12 @@ yarn add react-modal-dom
 
 Check out the demo here https://react-modal-dom.netlify.app/
 
+## Usage
+
 ```
 Note!
 Use only one 'ModalComponent' component in the app.
 ```
-
-## Usage
 
 > Step 1 - add "ModalComponent" into your index.js file. 
 
