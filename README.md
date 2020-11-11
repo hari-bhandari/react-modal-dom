@@ -55,6 +55,9 @@ const MyModal = () => {
 export default MyModal;
 ```
 
+What you will get:
+<img src="./static/step1.png" alt="">
+
 > Step 3 - use css to create styles for your modal
 
 ```css
@@ -67,8 +70,10 @@ export default MyModal;
   background: #fff;
 }
 ```
+What you will get:
+<img src="./static/step2.png" alt="">
 
-> Step 4 - use "modal" obj methods to close or open your modal window
+> Step 4 - use `modal` obj methods to close or open your modal window
 ```javascript
 import React from 'react';
 import { modal } from 'react-modal-dom';
@@ -93,8 +98,12 @@ const MyApp = () => {
 
 export default MyApp;
 ```
+#### `modal` object
+This object only has 2 methods: `close` and `open`
+> `modal.open(<CustomModal/>, callback)`
+> `modal.close(callback)`
 
-Use "modal" obj methods even in your redux actions
+### Use "modal" obj methods even in your redux actions
 
 ```javascript
 import { modal } from 'react-modal-dom';
@@ -102,16 +111,11 @@ import { modal } from 'react-modal-dom';
 export const myAction = () => async dispatch => {
   dispatch({ type: 'START' });
   try {
-    const { data, status } = await axios.get('...');
-    if (status < 200 && status >= 300) throw new Error();
+    // ....
     dispatch({ type: 'SUCCESS', payload: data });
-
     // close modal here
     modal.close();
-    
-  } catch (error) {
-    dispatch({ type: 'FAILURE' });
-};
+  // ....
 ```
 
 ```javascript
@@ -119,15 +123,10 @@ import { modal } from 'react-modal-dom';
 
 function* myWatcher() {
   try {
-    const { data, status } = await axios.get('...');
-    if (status < 200 || status >= 300) throw new Error();
+    // ...
     yield put({ type: 'SUCCESS', payload: data });
-
     // close modal here
     modal.close();
-
-  } catch (error) {
-    yield put({ type: 'FAILURE' });
-  }
+  // ...
 }
 ```
