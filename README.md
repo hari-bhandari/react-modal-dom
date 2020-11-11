@@ -163,11 +163,10 @@ import { openMyModal } from '../MyModal';
 export const myAction = () => async dispatch => {
   dispatch({ type: 'START' });
   try {
-    // ....
+    ...
     dispatch({ type: 'SUCCESS', payload: data });
     // open your custom modal
     openMyModal();
-  // ....
 ```
 
 ```javascript
@@ -175,10 +174,54 @@ import { openMyModal } from '../MyModal';
 
 function* myWatcher() {
   try {
-    // ...
+    ...
     yield put({ type: 'SUCCESS', payload: data });
     // open your custom modal
     openMyModal();
-  // ...
 }
 ```
+
+## Customize modal backdrop with css
+Just write some styles for class `.react-modal-backdrop`. Your styles will be prioritized over library styles.
+```css
+/* example */
+.react-modal-backdrop {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+}
+```
+What you will get:
+<img src="./static/step3.png" alt="">
+
+## Use with reacr-router-dom
+By default, the modal does not close when the route is changed. To fix this you need to write this code in your App.js component.
+
+```javascript
+import { withRouter } from 'react-router-dom';
+import { modal } from 'react-modal-dom';
+
+class App extends Component {
+  componentDidUpdate({ location }) {
+    const { pathname } = this.props.location;
+    if (location.pathname !== pathname) modal.close();
+  }
+}
+export default withRouter(App);
+
+// or with hooks
+
+import { useHistory } from 'react-router-dom';
+import { modal } from 'react-modal-dom';
+
+const App = () => {
+  const history = useHistory();
+  history.listen(modal.close);
+...
+```
+
+## TODO
+- Animations
+- Write tests
+- TypeScript
+- Close modals on route change
+- Other
