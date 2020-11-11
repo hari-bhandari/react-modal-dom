@@ -101,9 +101,10 @@ export default MyApp;
 ```
 ## `modal` object
 This object has only 2 methods: `close` and `open`
-> `modal.open(<CustomModal/>, callback)` 
-
-> `modal.close(callback)`  
+```javascript
+modal.open(<CustomModal/>, callback)
+modal.close(callback)
+```
 
 `<CustomModal />` - valid react component. Use only jsx sintaxis   
 `callback` - provide callback that will call immediately after your modal close or open
