@@ -101,6 +101,7 @@ export default MyApp;
 ### `modal` object
 This object has only 2 methods: `close` and `open`
 > `modal.open(<CustomModal/>, callback)`   
+
 > `modal.close(callback)`  
 
 `<CustomModal />` - valid react component. Use only jsx sintaxis   
