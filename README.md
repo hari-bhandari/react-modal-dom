@@ -14,7 +14,7 @@ yarn add react-modal-dom
 
 ## Demo
 
-Check out the demo here https://react-modal-dom.netlify.app/
+Check out the demo here <a href="https://react-modal-dom.netlify.app/" title="github" target="_blank" rel="noopener noreferrer">https://react-modal-dom.netlify.app/</a>
 
 ## Usage
 
