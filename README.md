@@ -15,6 +15,7 @@ yarn add react-modal-dom
 ## Demo
 
 Check out the demo here <a href="https://react-modal-dom.netlify.app/" title="demo" target="_blank" rel="noopener noreferrer">https://react-modal-dom.netlify.app/</a>
+
 <img src="./static/step3.png" alt="">
 
 ## Usage
@@ -58,6 +59,7 @@ export default MyModal;
 ```
 
 What you will get:
+
 <img src="./static/step1.png" alt="">
 
 > Step 3 - use css to create styles for your modal
@@ -73,6 +75,7 @@ What you will get:
 }
 ```
 What you will get:
+
 <img src="./static/step2.png" alt="">
 
 > Step 4 - use `modal` obj methods to close or open your modal window
@@ -192,6 +195,7 @@ Just write some styles for class `.react-modal-backdrop`. Your styles will be pr
 }
 ```
 What you will get:
+
 <img src="./static/step3.png" alt="">
 
 ## Use with reacr-router-dom
