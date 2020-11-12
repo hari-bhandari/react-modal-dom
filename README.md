@@ -20,7 +20,7 @@ Check out the demo here <a href="https://react-modal-dom.netlify.app/" title="de
 
 ## Usage
 
-Step 1 - add "ModalComponent" into your index.js file. 
+#### Step 1 - add "ModalComponent" into your index.js file. 
 
 Note!   
 Use only one 'ModalComponent' component in the app.
@@ -41,7 +41,7 @@ ReactDOM.render(
 );
 ```
 
-Step 2 - create your custom modal window
+#### Step 2 - create your custom modal window
 
 ```javascript
 const MyModal = () => {
@@ -59,7 +59,7 @@ What you will get:
 
 <img src="./static/step1.png" alt="">
 
-Step 3 - use css to create styles for your modal
+#### Step 3 - use css to create styles for your modal
 
 ```css
 /* example */
@@ -75,7 +75,7 @@ What you will get:
 
 <img src="./static/step2.png" alt="">
 
-Step 4 - use `modal` obj methods to close or open your modal window
+#### Step 4 - use `modal` obj methods to close or open your modal window
 
 ```javascript
 import React from 'react';
