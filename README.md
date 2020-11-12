@@ -20,13 +20,10 @@ Check out the demo here <a href="https://react-modal-dom.netlify.app/" title="de
 
 ## Usage
 
-> Step 1 - add "ModalComponent" into your index.js file. 
+Step 1 - add "ModalComponent" into your index.js file. 
 
-
-```
-Note!
+Note!   
 Use only one 'ModalComponent' component in the app.
-```
 
 ```javascript
 import React from 'react';
@@ -44,7 +41,7 @@ ReactDOM.render(
 );
 ```
 
-> Step 2 - create your custom modal window
+Step 2 - create your custom modal window
 
 ```javascript
 const MyModal = () => {
@@ -62,7 +59,7 @@ What you will get:
 
 <img src="./static/step1.png" alt="">
 
-> Step 3 - use css to create styles for your modal
+Step 3 - use css to create styles for your modal
 
 ```css
 /* example */
@@ -78,7 +75,8 @@ What you will get:
 
 <img src="./static/step2.png" alt="">
 
-> Step 4 - use `modal` obj methods to close or open your modal window
+Step 4 - use `modal` obj methods to close or open your modal window
+
 ```javascript
 import React from 'react';
 import { modal } from 'react-modal-dom';
@@ -103,7 +101,7 @@ const MyApp = () => {
 
 export default MyApp;
 ```
-## `modal` object
+## modal object
 This object has only 2 methods: `close` and `open`
 ```javascript
 modal.open(<CustomModal/>, callback)
@@ -114,7 +112,7 @@ modal.close(callback)
 `callback` - provide callback that will call immediately after your modal close or open
 
 
-## Use `modal` obj methods even in your redux actions
+## Use modal obj methods even in your redux actions
 
 ```javascript
 import { modal } from 'react-modal-dom';
